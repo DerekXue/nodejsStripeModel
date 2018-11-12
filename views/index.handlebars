@@ -1,0 +1,28 @@
+<section class="py-2">
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <h1 class="display-3 mt-3 pt-5">
+                web development ebook
+            </h1>
+            <p class="lead">
+                learn web development front ot back
+            </p>
+
+            <form action="/charge" method="POST">
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" data-key={{stripePublishableKey}}
+                    data-amount="1" data-name="ebook" data-description="ebook writen by dk" data-image="/img/download2.jpg"
+                    data-locale="auto" data-currency="sgd">
+                    </script>
+                <script>
+                    //Hide default stripe button
+                    document.getElementsByClassName('stripe-button-el')[0].style.display = 'none'
+                </script>
+                <button type="submit" class="btn btn-outline-dark text-white btn-lg">purchase for 0.1$</button>
+            </form>
+
+        </div>
+        <div class="col-md-6">
+            <img src="/img/download.jpg" alt="" class="img-fuild">
+        </div>
+    </div>
+</section>
