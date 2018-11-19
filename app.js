@@ -32,6 +32,8 @@ app.get('/', (req, res) => {
 app.post('/charge', (req, res) => {
     const amount = 2500;
 
+    console.log(req.body)
+
     stripe.customers.create({
         email: req.body.stripeEmail,
         source: req.body.stripeToken
