@@ -33,6 +33,7 @@ app.post('/charge', (req, res) => {
     const amount = 2500;
 
     console.log(req.body)
+    console.log("bomb check stripe token " + req.body.stripeToken)
 
     stripe.customers.create({
         email: req.body.stripeEmail,
